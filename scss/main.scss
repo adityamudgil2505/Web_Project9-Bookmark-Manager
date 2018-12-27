@@ -1,0 +1,275 @@
+$bgColor: #f8f8f8;
+$textColor: #000;
+$hoverBgColor: rgb(146, 146, 146);
+$hoverTextColor: #000;
+$btnBgColor: rgb(66, 66, 66);
+$btnTextColor: rgb(255, 255, 255);
+
+$titleFont: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$normalFont: "Open Sans", sans-serif;
+
+$smallFontSize: 12px;
+$normalFontSize: 14px;
+
+$customBorder: 1px solid rgba(155, 155, 155, 0.493);
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,body {
+  font-family: $normalFont;
+  font-size: $normalFontSize;
+}
+.container{
+  width: 300px;
+  background-color: $bgColor;
+  height: 250px;
+}
+ul{
+  list-style-type: none;
+}
+.header{
+  align-items: center;
+  padding: 5px;
+  h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2f5876;
+    padding:12px 10px 16px 10px;
+  }
+  .version{
+    font-size: 18px;
+  }
+  img{
+    width: 30px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+  }
+}
+.btns{
+  background-color: $btnBgColor;
+  color: $btnTextColor;
+  ul{
+    list-style-type: none;
+    li{
+      width: (100% /3);
+      text-align: center;
+      float: left;
+      padding:12px 0px;
+      &:hover{
+        background-color: $hoverBgColor;
+        color: $hoverTextColor;
+        cursor: pointer;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  margin-bottom: 5px;
+}
+.bookmarkMenu{
+  display: block;
+  margin: 0px 5px;
+  .textInput{
+    width: 90%;
+    height: 30px;
+    overflow: hidden;
+    margin: 0px auto 5px;;
+    input{
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.205);
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  .submit{
+    color: #fff;
+    background-color: #009e82;
+    width: 60%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    height: 34px;
+    text-align: center;
+    font-size: $smallFontSize;
+    border-radius: 10px;
+    &:hover{
+      cursor: pointer;
+      background-color: transparent;
+      color: #009e82;
+      border: $customBorder;
+    }
+  }
+  .extraInfo{
+    height: 40px;
+    margin-top: 15px;
+    position: relative;
+    font-size: $smallFontSize;
+    text-align: center;
+    color: #fff;
+    #clearAll{
+      width: 45%;
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      background-color: #ff0000;
+      transform: translate(-50%,-50%);
+      border-radius: 10px;
+      padding: 10px 0px;
+      &:hover{
+        background-color:$bgColor;
+        color: #ff0000;
+        border: $customBorder;
+        cursor: pointer;
+      }
+    }
+    #download{
+      width: 45%;
+      position: absolute;
+      left: 75%;
+      top: 50%;
+      background-color: rgb(212, 155, 0);
+      transform: translate(-50%,-50%);
+      padding: 10px 0px;
+      border-radius: 10px;
+      &:hover{
+        background-color:$bgColor;
+        color: rgb(212, 155, 0);
+        border: $customBorder;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.viewMenu{
+  display: none;
+  margin: 0px 5px;
+  height: 130px;
+  overflow: auto;
+  // tooltip
+  .tooltip{
+    display: none;
+  }
+  .linkContent{
+    float: left;
+    padding: 5px 5px;
+    width: 93%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .deleteBtn{
+    text-align: center;
+    float: right;
+    width: 7%;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 5px 6px;
+  }
+  li:nth-child(even) .linkContent{
+    background-color: #dedede;
+  }
+  li .linkContent{
+    &:hover{
+      background-color: $btnBgColor;
+      color: #fff;
+      cursor: pointer;
+      .tooltip{
+        display: block;
+        text-align: center;
+        left: 150px;
+        position: absolute;
+        color: rgba(0, 0, 0, 0.623);
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 2px 5px;
+        margin: 5px auto 0px;
+        transform: translate(-50%,0);
+        font-size: $smallFontSize;
+      }
+    }
+  }
+  
+}
+.searchMenu{
+  display: none;
+  margin: 0px 5px;
+  height: 130px;
+  overflow: auto;
+  .searchBar{
+    width:100%;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    input{
+      height: 100%;
+      width: 90%;
+      font-size: $normalFontSize;
+      color: #828282;
+      font-weight: lighter;
+      border-radius: 10px;
+      border: $customBorder;
+      text-align: center;
+      &:focus{
+        outline: none;
+        border: 1px solid skyblue;
+      }
+    }
+  }
+  .linkContent{
+    float: left;
+    padding: 5px 5px;
+    width: 93%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  li:nth-child(even) .linkContent{
+    background-color: #dedede;
+  }
+  li .linkContent{
+    &:hover{
+      background-color: $btnBgColor;
+      color: #fff;
+      cursor: pointer;
+      .tooltip{
+        display: block;
+        text-align: center;
+        left: 150px;
+        position: absolute;
+        color: rgba(0, 0, 0, 0.623);
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 2px 5px;
+        margin: 5px auto 0px;
+        transform: translate(-50%,0);
+        font-size: $smallFontSize;
+      }
+    }
+  }
+  .deleteBtn{
+    text-align: center;
+    float: right;
+    width: 7%;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 5px 6px;
+  }
+  
+}
+//cross button
+.deleteBtn{
+  &:hover{
+    background-color: transparent;
+    color: #ff0000;
+    cursor: pointer;
+  }
+}

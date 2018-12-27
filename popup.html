@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>BookMark Extension</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="scss/main.css" />
 </head>
 <body>
   <div class="container">
@@ -24,24 +24,30 @@
       </ul>
     </div>
     <div class="bookmarkMenu">
-      <input type="submit" value="Bookmark this page">
-      <input type="text" placeholder="add some details">
+      <div class="textInput">
+        <input id="details" type="text" name="details" placeholder="Details" maxlength="20">
+      </div>
+      <div class="submit">Bookmark This Webpage</div>
+      <div class="extraInfo">
+        <div id="clearAll">Clear All</div>
+        <div id="download">Download JSON</div>
+      </div>
     </div>
     <div class="viewMenu">
       <ul>
-        <li><span class="link">https://google.com/assqwqd?dscdscds&nyghfjndbg&gfdb&dfvgdv&</span><span class="deleteBtn">X</span></span></li>
       </ul>
     </div>
     <div class="searchMenu">
       <div class="searchBar">
-        <input type="text" placeholder="searchBar">
+        <input id="search" type="text" placeholder="Search">
       </div>
       <div class="searchedContent">
         <ul>
-          <li><span class="link">https://google.com/assqwqd?dscdscds&nyghfjndbg&gfdb&dfvgdv&</span><span class="deleteBtn">X</span></span></li>
         </ul>
       </div>
     </div>
   </div>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
