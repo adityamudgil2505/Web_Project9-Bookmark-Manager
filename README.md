@@ -20,7 +20,7 @@ Other features are
 - Chrome Extension API
 
 ### How to use this bookmark
-1. Go to "https://github.com/adityamudgil2505/Web_Project9-Bookmark-Manager". Now click "Clone or download" button and select "Download zip".
+1. Go to "https://github.com/adityamudgil2505/Web_Project9-Bookmark-Manager". Now click "Clone or download" button and select "Download zip" and unzip it.
 2. Window -> Extension [or just type the following url in address bar "chrome://extensions/"]
 3. Turn on the Developer mode on the right top corner.
 4. Then click on "load unpacked". Now select the folder "Web_Project9-Bookmark-Manager-master".
