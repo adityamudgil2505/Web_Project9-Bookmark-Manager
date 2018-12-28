@@ -35,6 +35,7 @@ var bmSubmit = () =>{
       });
       console.log(arr);
       $('#details').val("");
+      changeStorage();
     })
 
   });
@@ -53,6 +54,7 @@ $('#details').on('keypress',(e) =>{
 $('#clearAll').on('click',()=>{
   chrome.storage.sync.clear();
   console.log("All bookmark is deleted");
+  changeStorage();
 });
 
 // Download json Format
@@ -117,6 +119,7 @@ $('ul').on('click','.deleteBtn',(event) =>{
     detail.splice(i,1);
     console.log(detail);
     chrome.storage.sync.set({arr:detail});
+    changeStorage();
   });
 });
 
@@ -149,5 +152,6 @@ function searchIt(url)
     }
   });
 }
+
 //bugs
 // tooltip
