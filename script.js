@@ -130,6 +130,12 @@ $('ul').on('click','.linkContent',(event)=>{
 $('#search').on('keypress',(e)=>{
   searchIt(event.target.value);
 });
+// for backspace
+$('#search').on('keyup',(e)=>{
+  if(e.which==8){
+    searchIt(event.target.value);
+  }
+});
 function searchIt(url)
 { let par = $('.searchedContent ul');
   $('.searchedContent ul li').remove();
