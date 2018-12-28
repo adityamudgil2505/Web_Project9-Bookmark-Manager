@@ -87,11 +87,8 @@ function linkDisp(file)
 { var toInsert = $('.viewMenu ul');
   var len = file.length;
   $('.viewMenu ul li').remove();
-  // console.log("file");
-  // console.log(file);
-  // console.log("len=" + len);
   for(var i=len-1; i >=0;i--)
-  { toInsert.append("<li><div class='linkContent' data-internalid='"+file[i].url+"'>"+file[i].title+"<span class='tooltip'>"+file[i].detail +"</span></div><span class='deleteBtn'>X</span></span></li>")
+  { toInsert.append("<li><div class='linkContent' data-internalid='"+file[i].url+"'>"+file[i].title+"<span class='tooltip'>"+file[i].detail +"</span></div><span class='deleteBtn'>X</span></li>");
   }
 }
 
@@ -147,7 +144,7 @@ function searchIt(url)
     let len = file.length;
     for(let i=0;i<len;i++)
     { if(file[i].url.includes(url)==1 || file[i].title.toLowerCase().includes(url)==1)
-      { par.append("<li><div class='linkContent' data-internalid='"+file[i].url+"'>"+file[i].title+"<span class='tooltip'>"+file[i].detail +"</span></div><span class='deleteBtn'>X</span></span></li>")
+      { par.append("<li><div class='linkContent' data-internalid='"+file[i].url+"'>"+file[i].title+"<span class='tooltip'>"+file[i].detail +"</span></div><span class='deleteBtn'>X</span></li>");
       }
     }
   });

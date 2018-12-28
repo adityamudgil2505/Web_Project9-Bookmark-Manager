@@ -125,42 +125,32 @@ ul {
   color: #fff;
 }
 
-.bookmarkMenu .extraInfo #clearAll {
+.bookmarkMenu .extraInfo #clearAll, .bookmarkMenu .extraInfo #download {
   width: 45%;
   position: absolute;
-  left: 25%;
   top: 50%;
-  background-color: #ff0000;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 10px;
+  left: 25%;
+  background-color: #ff0000;
   padding: 10px 0px;
 }
 
-.bookmarkMenu .extraInfo #clearAll:hover {
-  background-color: #f8f8f8;
+.bookmarkMenu .extraInfo #clearAll:hover, .bookmarkMenu .extraInfo #download:hover {
+  background-color: transparent;
   color: #ff0000;
   border: 1px solid rgba(155, 155, 155, 0.493);
   cursor: pointer;
 }
 
 .bookmarkMenu .extraInfo #download {
-  width: 45%;
-  position: absolute;
   left: 75%;
-  top: 50%;
   background-color: #d49b00;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  padding: 10px 0px;
-  border-radius: 10px;
 }
 
 .bookmarkMenu .extraInfo #download:hover {
-  background-color: #f8f8f8;
   color: #d49b00;
-  border: 1px solid rgba(155, 155, 155, 0.493);
-  cursor: pointer;
 }
 
 .viewMenu {
@@ -168,53 +158,6 @@ ul {
   margin: 0px 5px;
   height: 130px;
   overflow: auto;
-}
-
-.viewMenu .tooltip {
-  display: none;
-}
-
-.viewMenu .linkContent {
-  float: left;
-  padding: 5px 5px;
-  width: 93%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.viewMenu .deleteBtn {
-  text-align: center;
-  float: right;
-  width: 7%;
-  background-color: red;
-  color: #fff;
-  padding: 5px 6px;
-}
-
-.viewMenu li:nth-child(even) .linkContent {
-  background-color: #dedede;
-}
-
-.viewMenu li .linkContent:hover {
-  background-color: #424242;
-  color: #fff;
-  cursor: pointer;
-}
-
-.viewMenu li .linkContent:hover .tooltip {
-  display: block;
-  text-align: center;
-  left: 150px;
-  position: absolute;
-  color: rgba(0, 0, 0, 0.623);
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 2px 5px;
-  margin: 5px auto 0px;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  font-size: 12px;
 }
 
 .searchMenu {
@@ -247,41 +190,7 @@ ul {
   border: 1px solid skyblue;
 }
 
-.searchMenu .linkContent {
-  float: left;
-  padding: 5px 5px;
-  width: 93%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.searchMenu li:nth-child(even) .linkContent {
-  background-color: #dedede;
-}
-
-.searchMenu li .linkContent:hover {
-  background-color: #424242;
-  color: #fff;
-  cursor: pointer;
-}
-
-.searchMenu li .linkContent:hover .tooltip {
-  display: block;
-  text-align: center;
-  left: 150px;
-  position: absolute;
-  color: rgba(0, 0, 0, 0.623);
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 2px 5px;
-  margin: 5px auto 0px;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  font-size: 12px;
-}
-
-.searchMenu .deleteBtn {
+.deleteBtn {
   text-align: center;
   float: right;
   width: 7%;
@@ -294,5 +203,44 @@ ul {
   background-color: transparent;
   color: #ff0000;
   cursor: pointer;
+}
+
+.linkContent {
+  float: left;
+  padding: 5px 5px;
+  width: 93%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+li:nth-child(even) .linkContent {
+  background-color: #dedede;
+}
+
+li .linkContent .tooltip {
+  display: none;
+}
+
+li .linkContent:hover {
+  background-color: #424242;
+  color: #fff;
+  cursor: pointer;
+}
+
+li .linkContent:hover .tooltip {
+  display: block;
+  text-align: center;
+  left: 50%;
+  height: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 5px auto 0px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -114,36 +114,27 @@ ul{
     font-size: $smallFontSize;
     text-align: center;
     color: #fff;
-    #clearAll{
+    #clearAll, #download{
       width: 45%;
       position: absolute;
-      left: 25%;
       top: 50%;
-      background-color: #ff0000;
       transform: translate(-50%,-50%);
       border-radius: 10px;
+      left: 25%;
+      background-color: #ff0000;
       padding: 10px 0px;
       &:hover{
-        background-color:$bgColor;
+        background-color:transparent;
         color: #ff0000;
         border: $customBorder;
         cursor: pointer;
       }
     }
     #download{
-      width: 45%;
-      position: absolute;
       left: 75%;
-      top: 50%;
       background-color: rgb(212, 155, 0);
-      transform: translate(-50%,-50%);
-      padding: 10px 0px;
-      border-radius: 10px;
       &:hover{
-        background-color:$bgColor;
         color: rgb(212, 155, 0);
-        border: $customBorder;
-        cursor: pointer;
       }
     }
   }
@@ -154,50 +145,6 @@ ul{
   margin: 0px 5px;
   height: 130px;
   overflow: auto;
-  // tooltip
-  .tooltip{
-    display: none;
-  }
-  .linkContent{
-    float: left;
-    padding: 5px 5px;
-    width: 93%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .deleteBtn{
-    text-align: center;
-    float: right;
-    width: 7%;
-    background-color: rgb(255, 0, 0);
-    color: #fff;
-    padding: 5px 6px;
-  }
-  li:nth-child(even) .linkContent{
-    background-color: #dedede;
-  }
-  li .linkContent{
-    &:hover{
-      background-color: $btnBgColor;
-      color: #fff;
-      cursor: pointer;
-      .tooltip{
-        display: block;
-        text-align: center;
-        left: 150px;
-        position: absolute;
-        color: rgba(0, 0, 0, 0.623);
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 2px 5px;
-        margin: 5px auto 0px;
-        transform: translate(-50%,0);
-        font-size: $smallFontSize;
-      }
-    }
-  }
-  
 }
 .searchMenu{
   display: none;
@@ -223,53 +170,55 @@ ul{
         border: 1px solid skyblue;
       }
     }
-  }
-  .linkContent{
-    float: left;
-    padding: 5px 5px;
-    width: 93%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  li:nth-child(even) .linkContent{
-    background-color: #dedede;
-  }
-  li .linkContent{
-    &:hover{
-      background-color: $btnBgColor;
-      color: #fff;
-      cursor: pointer;
-      .tooltip{
-        display: block;
-        text-align: center;
-        left: 150px;
-        position: absolute;
-        color: rgba(0, 0, 0, 0.623);
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 2px 5px;
-        margin: 5px auto 0px;
-        transform: translate(-50%,0);
-        font-size: $smallFontSize;
-      }
-    }
-  }
-  .deleteBtn{
-    text-align: center;
-    float: right;
-    width: 7%;
-    background-color: rgb(255, 0, 0);
-    color: #fff;
-    padding: 5px 6px;
-  }
-  
+  } 
 }
 //cross button
 .deleteBtn{
+  text-align: center;
+  float: right;
+  width: 7%;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  padding: 5px 6px;
   &:hover{
     background-color: transparent;
     color: #ff0000;
     cursor: pointer;
+  }
+}
+// link content
+.linkContent{
+  float: left;
+  padding: 5px 5px;
+  width: 93%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+li:nth-child(even) .linkContent{
+  background-color: #dedede;
+}
+li .linkContent{
+  .tooltip{
+    display: none;
+  }
+  &:hover{
+    background-color: $btnBgColor;
+    color: #fff;
+    cursor: pointer;
+    .tooltip{
+      display: block;
+      text-align: center;
+      left: 50%;
+      height: 20px;
+      position: relative;
+      color: rgba(0, 0, 0, 0.623);
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 2px 5px;
+      margin: 5px auto 0px;
+      transform: translate(-50%,0);
+      font-size: $smallFontSize;
+    }
   }
 }
