@@ -138,12 +138,9 @@ function searchIt(url)
     let file = detail.arr;
     let len = file.length;
     for(let i=0;i<len;i++)
-    { if(file[i].url.includes(url)==1 || file[i].title.toLowerCase().includes(url)==1)
+    { if(file[i].url.includes(url)==1 || file[i].title.toLowerCase().includes(url)==1 || file[i].detail.toLowerCase().includes(url)==1)
       { par.append("<li><div class='linkContent' data-internalid='"+file[i].url+"'>"+file[i].title+"<span class='tooltip'>"+file[i].detail +"</span></div><span class='deleteBtn'>X</span></li>");
       }
     }
   });
 }
-
-//bugs
-// tooltip
